@@ -73,9 +73,9 @@ nav a:hover { text-decoration: underline; }
 .vip-price .original,
 .medium-price .original {
   text-decoration: line-through;
-  text-decoration-color: rgba(255,0,0,0.5);
+  text-decoration-color: red; /* فقط خط قرمز */
   text-decoration-thickness: 2px;
-  color: #bbb;
+  color: #bbb; /* رنگ خاکستری متن */
   margin-left: 10px;
 }
 
@@ -227,9 +227,15 @@ nav a:hover { text-decoration: underline; }
 
 </div>
 
-
-
 <script>
+// رمز
+(function(){
+  const pass = prompt("لطفا رمز ورود را وارد کنید:");
+  if(pass !== "studiokavan7579"){
+    document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px;color:white;'>❌ دسترسی غیرمجاز</h2>";
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', function(){
   // تب‌ها
   const tabButtons = document.querySelectorAll('.tab-buttons button[data-tab]');
