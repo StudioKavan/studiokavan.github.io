@@ -114,11 +114,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.08; /* شفافیت */
-    pointer-events: none; /* جلوگیری از کلیک شدن */
-    z-index: 0; /* زیر همه محتوا قرار بگیره */
-    width: 800px; /* می‌تونی تغییر بدی */
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+    width: 800px;
     height: auto;
+  }
+
+  /* فقط روی موبایل (عرض کمتر از 768px) لوگو بیاد پایین‌تر */
+  @media (max-width: 768px) {
+    .logo-bg {
+      top: 60%; /* به جای 50% -> پایین‌تر میاد */
+    }
   }
 </style>
 </html>
