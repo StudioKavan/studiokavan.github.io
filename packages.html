@@ -230,8 +230,15 @@ nav a:hover { text-decoration: underline; }
 <script>
 // رمز
 (function(){
+  const correctPass = "studiokavan7579";
+
+  // اگر رمز قبلا درست وارد شده، کاری انجام نده
+  if(sessionStorage.getItem("access_granted") === "true") return;
+
   const pass = prompt("لطفا رمز ورود را وارد کنید:");
-  if(pass !== "studiokavan7579"){
+  if(pass.toLowerCase() === correctPass.toLowerCase()){
+    sessionStorage.setItem("access_granted", "true"); // علامت می‌زنیم که درست وارد شده
+  } else {
     document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px;color:white;'>❌ دسترسی غیرمجاز</h2>";
   }
 })();
@@ -269,20 +276,4 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 </body>
-<!-- لوگوی ثابت وسط صفحه -->
-<img src="images/logo.png" alt="Studio Kavan Logo" class="logo-bg">
-
-<style>
-  .logo-bg {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.08; /* شفافیت */
-    pointer-events: none; /* جلوگیری از کلیک شدن */
-    z-index: 0; /* زیر همه محتوا قرار بگیره */
-    width: 800px; /* می‌تونی تغییر بدی */
-    height: auto;
-  }
-</style>
 </html>
