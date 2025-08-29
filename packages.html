@@ -22,8 +22,25 @@ header h1, footer p { margin: 0; }
 nav a { color: #4CAF50; margin: 0 10px; text-decoration: none; font-size: 18px; }
 nav a:hover { text-decoration: underline; }
 
-.content { max-width: 900px; margin: auto; padding: 20px; }
+.content { max-width: 900px; margin: auto; padding: 20px; text-align: center; }
 
+/* دکمه بازگشت به خانه */
+.btn-home {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 20px auto;
+  font-size: 18px;
+  color: #fff;
+  background: #4CAF50;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+.btn-home:hover { background: #45a049; }
+
+/* تب‌ها */
 .tab-buttons {
   display: flex;
   justify-content: center;
@@ -46,6 +63,7 @@ nav a:hover { text-decoration: underline; }
 .tab { display: none; }
 .tab.active { display: block; }
 
+/* لیست آیتم‌ها */
 .package-items { list-style: none; padding: 0; text-align: right; }
 .package-items li {
   margin: 10px 0;
@@ -73,9 +91,9 @@ nav a:hover { text-decoration: underline; }
 .vip-price .original,
 .medium-price .original {
   text-decoration: line-through;
-  text-decoration-color: red; /* فقط خط قرمز */
+  text-decoration-color: red;
   text-decoration-thickness: 2px;
-  color: #bbb; /* رنگ خاکستری متن */
+  color: #bbb;
   margin-left: 10px;
 }
 
@@ -96,38 +114,18 @@ nav a:hover { text-decoration: underline; }
 .details-btn:hover {
   background: #2a2a2a;
 }
-
-.details-box {
-  display: none;
-  background: #333;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 8px;
-  color: #fff;
-}
-.plus-btn {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: #4CAF50;
-  color: white;
-  text-align: center;
-  line-height: 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-  font-weight: bold;
-}
 </style>
 </head>
 <body>
 
 <header>
   <h1>پکیج‌های استودیو کاوان</h1>
-  <nav><a href="index.html" class="btn-packages">🏠 بازگشت به خانه</a>
 </header>
 
 <div class="content">
+  <!-- دکمه بازگشت به خانه -->
+  <a href="index.html" class="btn-home">بازگشت به خانه</a>
+
   <!-- تب‌ها -->
   <div class="tab-buttons">
     <button data-tab="cip" class="active-btn">CIP</button>
@@ -135,7 +133,7 @@ nav a:hover { text-decoration: underline; }
     <button data-tab="custom">انتخابی</button>
   </div>
 
-  <!-- دکمه توضیحات باکس‌شده -->
+  <!-- دکمه توضیحات -->
   <div style="text-align:center; margin-bottom:20px;">
     <button class="details-btn" onclick="window.open('equipment.html', '_blank')">توضیحات</button>
   </div>
@@ -231,13 +229,10 @@ nav a:hover { text-decoration: underline; }
 // رمز
 (function(){
   const correctPass = "studiokavan7579";
-
-  // اگر رمز قبلا درست وارد شده، کاری انجام نده
   if(sessionStorage.getItem("access_granted") === "true") return;
-
   const pass = prompt("لطفا رمز ورود را وارد کنید:");
   if(pass.toLowerCase() === correctPass.toLowerCase()){
-    sessionStorage.setItem("access_granted", "true"); // علامت می‌زنیم که درست وارد شده
+    sessionStorage.setItem("access_granted", "true");
   } else {
     document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px;color:white;'>❌ دسترسی غیرمجاز</h2>";
   }
