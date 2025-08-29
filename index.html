@@ -28,6 +28,7 @@
     font-size: 18px;
   }
   nav a:hover { text-decoration: underline; }
+
   .content {
     max-width: 1000px;
     margin: auto;
@@ -38,25 +39,7 @@
     font-size: 20px;
     line-height: 1.6;
   }
-  .socials {
-    margin: 30px 0;
-  }
-  .socials a {
-    margin: 0 10px;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-  }
-  .socials img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    /* filter: brightness(0) invert(1); */ /* موقتاً غیرفعال برای موبایل */
-    transition: transform 0.2s;
-  }
-  .socials a:hover img {
-    transform: scale(1.1);
-  }
+
   .btn-packages {
     display: inline-block;
     padding: 15px 30px;
@@ -73,39 +56,79 @@
   .btn-packages:hover {
     background: #45a049;
   }
+
+  /* فوتر و آیکون‌ها */
+  .socials {
+    margin: 30px 0;
+    text-align: center;
+    white-space: nowrap;  /* همه آیکون‌ها در یک خط */
+    overflow-x: auto;     /* اسکرول افقی اگر صفحه کوچک باشد */
+  }
+  .socials a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .socials img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.2s;
+  }
+  .socials a:hover img {
+    transform: scale(1.1);
+  }
+
+  /* واکنش‌گرایی موبایل */
+  @media (max-width: 480px) {
+    .socials img {
+      width: 40px;
+      height: 40px;
+    }
+    .btn-packages {
+      width: 90%;
+      padding: 12px 20px;
+      font-size: 18px;
+    }
+  }
 </style>
 </head>
 <body>
 
 <header>
   <h1>استودیو کاوان</h1>
+  <nav>
+    <a href="#home">خانه</a>
+    <a href="#packages">پکیج‌ها</a>
+    <a href="#contact">تماس</a>
+  </nav>
 </header>
 
-<div class="content">
+<div class="content" id="home">
   <div class="intro">
     <p>به استودیو کاوان خوش آمدید! ارائه بهترین خدمات فیلمبرداری و عکاسی با تجهیزات حرفه‌ای برای جشن‌ها و مراسم شما.</p>
   </div>
 
- <div class="socials">
-  <a href="tel:+989211890639" title="تماس">
-    <img src="icons/phone.png" alt="تلفن" width="50" height="50">
-  </a>
-  <a href="https://www.instagram.com/studio_kavan" target="_blank" title="اینستاگرام">
-    <img src="icons/instagram.png" alt="اینستاگرام" width="50" height="50">
-  </a>
-  <a href="https://t.me/Studio_kavan" target="_blank" title="تلگرام">
-    <img src="icons/telegram.png" alt="تلگرام" width="50" height="50">
-  </a>
-  <a href="https://wa.me/989211890639" target="_blank" title="واتساپ">
-    <img src="icons/whatsapp.png" alt="واتساپ" width="50" height="50">
-  </a>
-  <!-- آیکون لوکیشن PNG اضافه شده -->
-  <a href="https://maps.app.goo.gl/BqJscujPPR2jb8bj9" target="_blank" title="لوکیشن">
-    <img src="icons/location.png" alt="لوکیشن" width="50" height="50">
-  </a>
-</div>
-
   <a href="index.html" class="btn-packages">پکیج‌های استودیو کاوان</a>
+
+  <!-- فوتر با تمام آیکون‌ها و لوکیشن -->
+  <div class="socials" id="contact">
+    <a href="tel:+989211890639" title="تماس">
+      <img src="icons/phone.png" alt="تلفن">
+    </a>
+    <a href="https://www.instagram.com/studio_kavan" target="_blank" title="اینستاگرام">
+      <img src="icons/instagram.png" alt="اینستاگرام">
+    </a>
+    <a href="https://t.me/Studio_kavan" target="_blank" title="تلگرام">
+      <img src="icons/telegram.png" alt="تلگرام">
+    </a>
+    <a href="https://wa.me/989211890639" target="_blank" title="واتساپ">
+      <img src="icons/whatsapp.png" alt="واتساپ">
+    </a>
+    <!-- لوکیشن با لینک مستقیم گوگل مپ -->
+    <a href="https://www.google.com/maps/place/استودیو+عکس+و+فیلم+کاوان/@37.1933463,50.1640151,15z" target="_blank" title="لوکیشن">
+      <img src="icons/location.png" alt="لوکیشن">
+    </a>
+  </div>
 </div>
 
 </body>
