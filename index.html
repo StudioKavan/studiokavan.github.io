@@ -18,10 +18,7 @@
     text-align: center;
     padding: 20px 0;
   }
-  header h1 {
-    margin: 0;
-    font-size: 32px;
-  }
+  header h1 { margin: 0; font-size: 32px; }
   nav a {
     color: #fff;
     margin: 0 10px;
@@ -54,9 +51,7 @@
     text-decoration: none;
     transition: background 0.3s;
   }
-  .btn-packages:hover {
-    background: #45a049;
-  }
+  .btn-packages:hover { background: #45a049; }
 
   /* فوتر و آیکون‌ها */
   .socials {
@@ -64,34 +59,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;       /* اجازه نده خط جدید ایجاد شود */
-    overflow-x: auto;        /* اسکرول افقی اگر صفحه کوچک باشد */
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
-  .socials a {
-    display: inline-block;
-    margin: 0 5px;           /* فاصله کم برای موبایل */
-  }
+  .socials a { display: inline-block; margin: 0 5px; }
   .socials img {
     width: 50px;
     height: 50px;
     object-fit: contain;
     transition: transform 0.2s;
   }
-  .socials a:hover img {
-    transform: scale(1.1);
-  }
+  .socials a:hover img { transform: scale(1.1); }
 
-  /* واکنش‌گرایی موبایل */
   @media (max-width: 480px) {
-    .socials img {
-      width: 30px;
-      height: 30px;
-    }
-    .btn-packages {
-      width: 90%;
-      padding: 12px 20px;
-      font-size: 18px;
-    }
+    .socials img { width: 30px; height: 30px; }
+    .btn-packages { width: 90%; padding: 12px 20px; font-size: 18px; }
   }
 </style>
 </head>
@@ -100,6 +82,9 @@
 <header>
   <h1>استودیو کاوان</h1>
   <nav>
+    <a href="#home">خانه</a>
+    <a href="#packages">پکیج‌ها</a>
+    <a href="#contact">تماس</a>
   </nav>
 </header>
 
@@ -110,7 +95,7 @@
 
   <a href="index.html" class="btn-packages">پکیج‌های استودیو کاوان</a>
 
-  <!-- فوتر با همه آیکون‌ها و لینک مستقیم لوکیشن -->
+  <!-- فوتر با همه آیکون‌ها و لینک Search گوگل مپس -->
   <div class="socials" id="contact">
     <a href="tel:+989211890639" title="تماس">
       <img src="icons/phone.png" alt="تلفن">
@@ -124,10 +109,10 @@
     <a href="https://wa.me/989211890639" target="_blank" title="واتساپ">
       <img src="icons/whatsapp.png" alt="واتساپ">
     </a>
-    <!-- لوکیشن با لینک مستقیم مختصات -->
-    <a href="https://www.google.com/maps/place/%D8%A7%D8%B3%D8%AA%D9%88%D8%AF%DB%8C%D9%88+%D8%B9%DA%A9%D8%B3+%D9%88+%D9%81%DB%8C%D9%84%D9%85+%DA%A9%D8%A7%D9%88%D8%A7%D9%86%E2%80%AD/@37.1933505,50.16659,17z/data=!3m1!4b1!4m6!3m5!1s0x3f8ac900612d9b55:0x89e108344ff843aa!8m2!3d37.1933463!4d50.1640151!16s%2Fg%2F11w35d0qr8?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" title="لوکیشن">
-  <img src="icons/location.png" alt="لوکیشن">
-</a>
+    <!-- لوکیشن با لینک Search گوگل مپس -->
+    <a href="https://www.google.com/maps/search/?api=1&query=استودیو+عکس+و+فیلم+کاوان" target="_blank" title="لوکیشن">
+      <img src="icons/location.png" alt="لوکیشن">
+    </a>
   </div>
 </div>
 
