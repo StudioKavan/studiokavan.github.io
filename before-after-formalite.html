@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فرمالیته - قبل و بعد ادیت عکس‌ها</title>
+<style>
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111; /* بک دارک */
+  color: #fff;
+  text-align: center;
+}
+
+header {
+  background: rgba(0,0,0,0.8);
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.img-wrapper img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.btn-toggle {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #2196F3;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-toggle:hover { background: #1976D2; }
+
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #555;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.back-btn:hover { background: #777; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>فرمالیته</h1>
+</header>
+
+<div class="container">
+  <div class="img-wrapper">
+    <img id="beforeImg" src="images/formalite/before1.jpg" alt="قبل">
+    <img id="afterImg" src="images/formalite/after1.jpg" alt="بعد" style="display:none;">
+  </div>
+
+  <button class="btn-toggle" onclick="toggleImage()">نمایش قبل/بعد</button>
+
+  <a href="before-after.html" class="back-btn">بازگشت</a>
+</div>
+
+<script>
+let showingBefore = true;
+function toggleImage() {
+  const beforeImg = document.getElementById('beforeImg');
+  const afterImg = document.getElementById('afterImg');
+
+  if(showingBefore){
+    beforeImg.style.display = 'none';
+    afterImg.style.display = 'block';
+  } else {
+    beforeImg.style.display = 'block';
+    afterImg.style.display = 'none';
+  }
+
+  showingBefore = !showingBefore;
+}
+</script>
+
+</body>
+</html>
