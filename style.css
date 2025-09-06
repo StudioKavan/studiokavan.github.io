@@ -1,0 +1,130 @@
+/* ======= پایه و ساختار ======= */
+body { 
+  font-family: Arial, Tahoma, sans-serif; 
+  margin: 0; 
+  padding: 0; 
+  background: #f9f9f9; 
+  color: #000; 
+}
+
+header, footer { 
+  background: #111; 
+  color: #fff; 
+  text-align: center; 
+  padding: 20px 0; 
+}
+
+header h1, footer p { margin: 0; }
+
+nav a { 
+  color: #fff; 
+  margin: 0 10px; 
+  text-decoration: none; 
+  font-size: 18px; 
+}
+nav a:hover { text-decoration: underline; }
+
+.content { 
+  max-width: 900px; 
+  margin: auto; 
+  padding: 20px; 
+}
+
+/* ======= دکمه‌های تب ======= */
+.tab-buttons { 
+  display: flex; 
+  justify-content: center; 
+  margin-bottom: 20px; 
+}
+
+.tab-buttons button { 
+  padding: 10px 20px; 
+  margin: 0 5px; 
+  cursor: pointer; 
+  font-size: 18px; 
+  background: #ccc; 
+  border: none; 
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons button.active-btn { 
+  background: #4CAF50; 
+  color: #fff; 
+}
+
+/* ======= تب‌ها ======= */
+.tab { display: none; }
+.tab.active { display: block; }
+
+/* ======= پکیج‌ها ======= */
+.package-items { 
+  list-style: none; 
+  padding: 0; 
+  text-align: right; 
+}
+
+.package-items li { 
+  margin: 10px 0; 
+  display: flex; 
+  justify-content: flex-start; 
+  align-items: center; 
+}
+
+.package-items li span.text { 
+  text-align: right; 
+  flex: 1; 
+  margin-right: 20px; 
+}
+
+.package-items li span.price { 
+  width: 140px; 
+  margin-left: 10px; 
+  white-space: nowrap; 
+  display: inline-block; 
+  text-align: right; 
+  font-variant-numeric: tabular-nums; 
+}
+
+/* ======= دکمه‌های + سبز ======= */
+.accordion-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: green;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.accordion-btn.active { transform: rotate(45deg); }
+
+/* ======= محتوای باز شونده ======= */
+.accordion-content { 
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 0.5s ease, padding 0.3s ease; 
+  padding-right: 0;
+}
+
+/* ======= قیمت‌ها ======= */
+.vip-price .final, .medium-price .final, .custom-total { 
+  font-size: 24px; 
+  font-weight: bold; 
+  color: green; 
+  margin-top: 20px; 
+  text-align: right; 
+}
+.vip-price .original, .medium-price .original { 
+  text-decoration: line-through; 
+  font-size: 20px; 
+  color: black; 
+  text-decoration-color: rgba(255,0,0,0.5); 
+  margin-left: 10px; 
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>توضیحات تجهیزات - استودیو کاوان</title>
+<style>
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(180deg, #121212, #2c2c2c);
+  color: #fff;
+  line-height: 1.6;
+}
+header, footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+header h1, footer p { margin: 0; }
+.content { max-width: 900px; margin: auto; padding: 20px; }
+
+h2 { color: #4CAF50; margin-top: 30px; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; }
+p { margin: 10px 0; }
+
+.back-btn {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.back-btn:hover { background: #45a049; }
+
+/* آکاردئون */
+.accordion {
+  background-color: #1e1e1e;
+  color: #fff;
+  cursor: pointer;
+  padding: 12px 20px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 18px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.accordion:hover { background-color: #333; }
+.accordion.active { background-color: #4CAF50; color: #fff; }
+.accordion span.symbol {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.panel {
+  padding: 0 20px;
+  display: none;
+  background-color: #2c2c2c;
+  overflow: hidden;
+  border-left: 3px solid #4CAF50;
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 10px;
+  color: #fff;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>توضیحات تجهیزات استودیو کاوان</h1>
+</header>
+
+<div class="content">
+
+  <button class="back-btn" onclick="window.location.href='packages.html'">بازگشت به صفحه پکیج‌ها</button>
+
+  <!-- آکاردئون‌ها -->
+  <button class="accordion">کرین <span class="symbol">+</span></button>
+  <div class="panel">
+    <p>یک دستگاه شبیه جرثقیل که توی سالن نصب میشه و اکثرا تصاویر هوایی نرم میگیره و بخاطر لنز سوپروایدی که روی دوربین کرین نصب میشه کل جایگاه رقص رو توی دید خودش قرار میده یا پوشش میده.</p>
+  </div>
+
+  <button class="accordion">رونین <span class="symbol">+</span></button>
+  <div class="panel">
+    <p>یه دستگاه استابلایزر (لرزشگیر) هستش که دوربین روش نصب میشه و باعث میشه که تصویربردار بتونه تصاویر حرکتی بگیره و راحت دور سوژه و دور جایگاه در حرکت باشه. رونین باعث میشه که به جای تصویر خسته‌کننده ثابتی که با سه‌پایه میگیرن یه تصویر حرکتی و مهیج داشته باشید و از دیدنش حس خستگی و یکنواختی نداشته باشید.</p>
+  </div>
+
+  <button class="accordion">FPV <span class="symbol">+</span></button>
+  <div class="panel">
+    <p>این پرنده شبیه به هلی‌شات وظیفه ثبت تصاویر هوایی توی پارت‌های ویژه جشن مثل ورود، رقص دونفره، برش کیک، تانگو و چند پارت مهیج را دارد. FPV نسبت به هلی‌شات، تصویر واید‌تر (گسترده و یا بازتر) دارد و از جاهایی عبور میکند که هلی‌شات از پسش برنمیاد و سرعت بالایی هم دارد.</p>
+  </div>
+
+  <button class="accordion">عکاسی رئال <span class="symbol">+</span></button>
+  <div class="panel">
+    <p>پای ثابت همه جشن‌ها هست چون تعداد خیلی بالایی عکس از لحظات قشنگ خودتون و مهموناتون از لحظه ورود تا عکس‌های خانوادگی انتهای جشن دارید. حسن وجود عکاس‌رئال این است که کل شات‌هایی که توی باغ و امارت و جشن زده میشه همه فایل‌ها بدون ریسایز و افت‌کیفیت بصورت فایل اصلی تقدیم عروس و داماد میشه (بالای هزارتا عکس).</p>
+  </div>
+
+  <button class="accordion">ویدیورئال <span class="symbol">+</span></button>
+  <div class="panel">
+    <p>یک دوربین روی دست هستش که وظیفش شکار لحظه‌های مهیج در جشن هست. ثبت تصاویر زوم از عروس و داماد و مهمون‌های اکتیو درحال رقص. حسن انتخاب ویدیو رئال در پکیج، داشتن تصاویر مناسب جهت ساخت دو الی سه کلیپ کوتاه از دنس و استفاده یک‌سری از این تصاویر در فیلم اصلی است. با انتخاب این آپشن، یک زاویه جدید و تصویر زوم به تصاویر اصلی جشنتون اضافه میشه.</p>
+  </div>
+
+  <button class="accordion">پخش فیلم <span class="symbol">+</span></button>
+  <div class="panel">
+    <p>یک آپشن بسیار جذاب و مهیج است که در سالن، شما و مهموناتون رو به وجد میاره. پخش فیلم باغ و امارت، به اضافه کلیپ‌های فرمالیته (درصورت داشتن فرمالیته) جزو پارت‌های آخر جشنتون هست که روی پرده پروجکشن یا تی‌وی تالار پخش میشه.</p>
+  </div>
+
+  <button class="accordion">اسلایدشو <span class="symbol">+</span></button>
+  <div class="panel">
+    <p>پخش عکس‌های ادیت شده باغ و امارت، به علاوه عکس‌های فرمالیته (درصورت داشتن فرمالیته) است و پخش این عکس‌ها روی دو عدد تی‌وی انجام میشود: یکی بصورت افقی و دیگری بصورت عمودی در تی‌وی مخصوص خودشان پخش میشوند.</p>
+  </div>
+
+  <button class="accordion">آلبوم ژورنال باکس VIP <span class="symbol">+</span></button>
+  <div class="panel">
+    <p>پکیج وودباکس VIP شامل: آلبوم بزرگ سایز 60×30، مینی آلبوم، آلبوم مجله‌ای، چاپ 7تکه عکس قطعه‌ای. حق انتخاب رنگ از 30 رنگ مختلف برای پارچه مخمل جلد آلبوم. گارانتی 24 ماهه درصورت بازشدن چسب‌صفحه، تاب‌برداشتن آلبوم و خرابی جلد.</p>
+  </div>
+
+  <button class="accordion">پکیج فرمالیته روتین <span class="symbol">+</span></button>
+  <div class="panel">
+    <p>شامل یک دوربین فیلمبرداری همراه با رونین و یک دوربین عکاسی هستش که تمامی عکس‌های فرمالیته با کیفیت اصلی و بدون افت‌کیفیت تقدیم شما میشود. همچنین دسته‌گل عروسی نیز داخل پکیج فرمالیته قرار دارد.</p>
+  </div>
+
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const acc = document.querySelectorAll('.accordion');
+  acc.forEach(a => {
+    a.addEventListener('click', function(){
+      this.classList.toggle('active');
+      const panel = this.nextElementSibling;
+      if(panel.style.display === "block"){
+        panel.style.display = "none";
+        this.querySelector('.symbol').textContent = "+";
+      } else {
+        panel.style.display = "block";
+        this.querySelector('.symbol').textContent = "–";
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

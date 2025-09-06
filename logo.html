@@ -1,0 +1,20 @@
+<style>
+  .logo-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+    width: 200px;
+    height: auto;
+  }
+
+  /* فقط روی موبایل (عرض کمتر از 768px) لوگو بیاد پایین‌تر */
+  @media (max-width: 768px) {
+    .logo-bg {
+      top: 60%; /* به جای 50% -> پایین‌تر میاد */
+    }
+  }
+</style>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- صفحه اصلی -->
+  <url>
+    <loc>https://studiokavan.github.io/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- صفحه توضیحات تجهیزات -->
+  <url>
+    <loc>https://studiokavan.github.io/equipment.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- مثال برای صفحه آینده (اگر صفحه جدید اضافه شد) -->
+  <!--
+  <url>
+    <loc>https://studiokavan.github.io/newpage.html</loc>
+    <priority>0.7</priority>
+  </url>
+  -->
+
+</urlset>
