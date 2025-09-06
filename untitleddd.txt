@@ -1,0 +1,45 @@
+<section id="packages" class="packages">
+  <div class="content">
+    <h2>پکیج‌های استودیو کاوان</h2>
+
+    <div class="package-item">
+      <label><input type="checkbox" class="item" data-price="1000"> عکاسی مراسم</label>
+    </div>
+    <div class="package-item">
+      <label><input type="checkbox" class="item" data-price="1500"> فیلمبرداری مراسم</label>
+    </div>
+    <div class="package-item">
+      <label><input type="checkbox" class="item" data-price="500"> آلبوم عکس</label>
+    </div>
+    <div class="package-item">
+      <label><input type="checkbox" class="item" data-price="700"> فیلمبرداری هوایی</label>
+    </div>
+
+    <div class="total-price">
+      <strong>قیمت کل: <span id="total">0</span> تومان</strong>
+    </div>
+  </div>
+</section>
+
+<style>
+  .packages { padding: 50px 20px; background: #f9f9f9; text-align: center; }
+  .packages h2 { margin-bottom: 30px; font-size: 32px; }
+  .package-item { margin: 10px 0; font-size: 20px; }
+  .total-price { margin-top: 20px; font-size: 24px; color: #333; }
+  input[type="checkbox"] { margin-right: 10px; transform: scale(1.2); }
+</style>
+
+<script>
+  const items = document.querySelectorAll('.item');
+  const totalEl = document.getElementById('total');
+
+  items.forEach(item => {
+    item.addEventListener('change', () => {
+      let total = 0;
+      items.forEach(i => {
+        if(i.checked) total += parseFloat(i.dataset.price);
+      });
+      totalEl.textContent = total;
+    });
+  });
+</script>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>استودیو کاوان - عکاسی و فیلمبرداری عروس و داماد</title>
+  <style>
+    /* Reset و تنظیمات پایه */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: Arial, sans-serif; background: #fff; color: #000; }
+
+    /* هدر */
+    header { background: #000; color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: relative; }
+    header h1 { font-size: 24px; }
+    .menu-toggle { font-size: 24px; cursor: pointer; display: none; }
+
+    nav { display: flex; gap: 15px; }
+    nav a { color: #fff; text-decoration: none; font-size: 16px; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Hero */
+    .hero-section { background-image: url('https://images.unsplash.com/photo-1604007509023-f82837d85db7'); background-size: cover; background-position: center; height: 300px; display: flex; justify-content: center; align-items: center; }
+    .hero-section h2 { color: #fff; font-size: 28px; text-shadow: 2px 2px 10px rgba(0,0,0,0.7); text-align:center; }
+
+    /* بخش محتوا */
+    .content { padding: 40px 20px; text-align: center; }
+
+    .section-title { font-size: 22px; margin-bottom: 20px; }
+
+    .services, .gallery, .about, .contact, .before-after { margin-bottom: 40px; }
+
+    .services div, .gallery div, .before-after div { margin: 10px 0; padding: 15px; background: #f0f0f0; border-radius: 8px; }
+
+    /* Footer */
+    footer { background: #000; color: #fff; text-align: center; padding: 20px; }
+
+    /* واکنش‌گرایی موبایل */
+    @media(max-width:768px){
+      nav { 
+        flex-direction: column; 
+        display: none; 
+        background: #000; 
+        position: absolute; 
+        top: 55px; 
+        right: 0; 
+        width: 100%; 
+        text-align: center; 
+      }
+      nav a { padding: 10px 0; border-top: 1px solid #444; }
+      .menu-toggle { display: block; }
+      nav.active { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>استودیو کاوان</h1>
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  <nav id="nav-menu">
+    <a href="#services">خدمات</a>
+    <a href="#gallery">گالری</a>
+    <a href="#about">درباره ما</a>
+    <a href="#contact">تماس با ما</a>
+    <a href="#before-after">قبل/بعد</a>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <h2>لحظات خاص شما را ثبت می‌کنیم</h2>
+</section>
+
+<div class="content">
+  <section id="services" class="services">
+    <h3 class="section-title">خدمات ما</h3>
+    <div>عکاسی عروس و داماد</div>
+    <div>فیلمبرداری حرفه‌ای</div>
+    <div>فیلمبرداری هوایی با پهپاد</div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h3 class="section-title">نمونه کارها</h3>
+    <div>عکس نمونه ۱</div>
+    <div>عکس نمونه ۲</div>
+    <div>عکس نمونه ۳</div>
+  </section>
+
+  <section id="about" class="about">
+    <h3 class="section-title">درباره ما</h3>
+    <p>استودیو کاوان با سال‌ها تجربه در زمینه عکاسی و فیلمبرداری عروسی، لحظات شما را جاودانه می‌کند.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3 class="section-title">تماس با ما</h3>
+    <p>ایمیل: info@kavanstudio.com</p>
+    <p>تلفن: ۰۹۱۲xxxxxxx</p>
+  </section>
+
+  <section id="before-after" class="before-after">
+    <h3 class="section-title">قبل و بعد</h3>
+    <div>نمونه قبل</div>
+    <div>نمونه بعد</div>
+  </section>
+</div>
+
+<footer>
+  <p>© 2025 استودیو کاوان. همه حقوق محفوظ است.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
