@@ -18,6 +18,7 @@ header {
   padding: 20px 0;
 }
 header h1 { margin: 0; font-size: 32px; }
+
 nav a {
   color: #fff;
   margin: 0 10px;
@@ -43,11 +44,21 @@ nav a:hover { text-decoration: underline; }
 }
 .btn-packages:hover { background: #45a049; }
 
-/* بخش پکیج‌ها واقعی */
-.packages {
-  margin-top: 40px;
-  text-align: center;
+/* بخش انتخاب قبل/بعد */
+.btn-before-after {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 20px 10px 0 10px;
+  font-size: 20px;
+  color: #fff;
+  background: #2196F3;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
 }
+.btn-before-after:hover { background: #1976D2; }
 
 /* فوتر و آیکون‌ها */
 .socials {
@@ -69,7 +80,7 @@ nav a:hover { text-decoration: underline; }
 
 @media (max-width: 480px) {
   .socials img { width: 30px; height: 30px; }
-  .btn-packages { width: 90%; padding: 12px 20px; font-size: 18px; }
+  .btn-packages, .btn-before-after { width: 90%; padding: 12px 20px; font-size: 18px; }
 }
 </style>
 </head>
@@ -84,6 +95,13 @@ nav a:hover { text-decoration: underline; }
     <p>به استودیو کاوان خوش آمدید! ارائه بهترین خدمات فیلمبرداری و عکاسی با تجهیزات حرفه‌ای برای جشن‌ها و مراسم شما.</p>
   </div>
 
+  <!-- دکمه نمایش قبل/بعد -->
+  <a href="before-after.html" class="btn-before-after">نمایش قبل/بعد</a>
+
+  <!-- دکمه پکیج‌ها -->
+  <a href="packages.html" class="btn-packages">پکیج‌های استودیو کاوان</a>
+
+  <!-- شبکه‌های اجتماعی -->
   <div class="socials" id="contact">
     <a href="tel:+989211890639" title="تماس"><img src="icons/phone.png" alt="تلفن"></a>
     <a href="https://www.instagram.com/studio_kavan" target="_blank" title="اینستاگرام"><img src="icons/instagram.png" alt="اینستاگرام"></a>
@@ -91,11 +109,6 @@ nav a:hover { text-decoration: underline; }
     <a href="https://wa.me/989211890639" target="_blank" title="واتساپ"><img src="icons/whatsapp.png" alt="واتساپ"></a>
     <a href="https://www.google.com/maps/search/?api=1&query=استودیو+عکس+و+فیلم+کاوان" target="_blank" title="لوکیشن"><img src="icons/location.png" alt="لوکیشن"></a>
   </div>
-</div>
-
-<!-- فقط این div اضافه شده -->
-<div style="text-align: center;">
-  <a href="packages.html" class="btn-packages">پکیج‌های استودیو کاوان</a>
 </div>
 
 </body>
