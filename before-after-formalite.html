@@ -9,7 +9,7 @@ body {
   font-family: Arial, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
-  background: #111; /* بک دارک */
+  background: #111; /* بک‌گراند دارک */
   color: #fff;
   text-align: center;
 }
@@ -29,31 +29,18 @@ header h1 {
   max-width: 900px;
   margin: 30px auto;
   padding: 0 15px;
-  position: relative;
 }
 
 .img-wrapper {
   position: relative;
   display: inline-block;
-  width: 100%;
-  max-width: 900px;
-  height: auto;
+  max-width: 100%;
 }
 
 .img-wrapper img {
   width: 100%;
   border-radius: 12px;
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
-.img-wrapper img.active {
-  opacity: 1;
-  position: relative;
 }
 
 .btn-toggle {
@@ -82,6 +69,19 @@ header h1 {
 }
 
 .back-btn:hover { background: #777; }
+
+/* موبایل: اطمینان از نمایش کامل عکس و دکمه‌ها */
+@media (max-width: 768px) {
+  .btn-toggle {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .back-btn {
+    width: 80%;
+    font-size: 16px;
+  }
+}
 </style>
 </head>
 <body>
@@ -92,8 +92,8 @@ header h1 {
 
 <div class="container">
   <div class="img-wrapper">
-    <img id="beforeImg" src="images/formalite/before1.jpg" alt="قبل" class="active">
-    <img id="afterImg" src="images/formalite/after1.jpg" alt="بعد">
+    <img id="beforeImg" src="images/formalite/before1.jpg" alt="قبل">
+    <img id="afterImg" src="images/formalite/after1.jpg" alt="بعد" style="display:none;">
   </div>
 
   <button class="btn-toggle" onclick="toggleImage()">نمایش قبل/بعد</button>
@@ -103,17 +103,16 @@ header h1 {
 
 <script>
 let showingBefore = true;
-
 function toggleImage() {
   const beforeImg = document.getElementById('beforeImg');
   const afterImg = document.getElementById('afterImg');
 
-  if (showingBefore) {
-    beforeImg.classList.remove('active');
-    afterImg.classList.add('active');
+  if(showingBefore){
+    beforeImg.style.display = 'none';
+    afterImg.style.display = 'block';
   } else {
-    beforeImg.classList.add('active');
-    afterImg.classList.remove('active');
+    beforeImg.style.display = 'block';
+    afterImg.style.display = 'none';
   }
 
   showingBefore = !showingBefore;
