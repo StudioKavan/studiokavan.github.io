@@ -79,8 +79,8 @@ header h1 {
 
 <div class="container">
   <div class="img-wrapper">
-    <img id="beforeImg" src="images/formalite/before1.jpg" alt="قبل">
-    <img id="afterImg" src="images/formalite/after1.jpg" alt="بعد" style="display:none;">
+    <!-- فقط یک تصویر -->
+    <img id="toggleImg" src="images/formalite/before1.jpg" alt="قبل">
   </div>
 
   <button class="btn-toggle" onclick="toggleImage()">نمایش قبل/بعد</button>
@@ -89,21 +89,25 @@ header h1 {
 </div>
 
 <script>
+// آرایه تصاویر قبل و بعد
+const images = [
+  { before: "images/formalite/before1.jpg", after: "images/formalite/after1.jpg" },
+  { before: "images/formalite/before2.jpg", after: "images/formalite/after2.jpg" },
+  { before: "images/formalite/before3.jpg", after: "images/formalite/after3.jpg" }
+];
+
+let currentIndex = 0;
 let showingBefore = true;
+
 function toggleImage() {
-  const beforeImg = document.getElementById('beforeImg');
-  const afterImg = document.getElementById('afterImg');
+  const img = document.getElementById('toggleImg');
+  const current = images[currentIndex];
 
-  if(showingBefore){
-    beforeImg.style.display = 'none';
-    afterImg.style.display = 'block';
-  } else {
-    beforeImg.style.display = 'block';
-    afterImg.style.display = 'none';
-  }
-
+  img.src = showingBefore ? current.after : current.before;
   showingBefore = !showingBefore;
 }
+
+// اگر بخوای بعداً قابلیت رفتن به عکس بعدی رو اضافه کنیم، می‌تونیم یه دکمه دیگه بسازیم
 </script>
 
 </body>
